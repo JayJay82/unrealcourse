@@ -20,13 +20,16 @@ int main()
 
 void PlayGame()
 {
+	BCGame.Reset();
 	int maxTry = BCGame.GetMaxTries();
 	std::cout << maxTry << std::endl;
 	constexpr int Max_Turn = 0;
+	// TODO change for while
 	for (int i = 0; i <= maxTry; i++) {
-		std::string guess = GetGuess();
+		std::string guess = GetGuess(); // TODO check for valid guess
 		std::cout << "Your Guess is: " << guess << std::endl;
 	}
+	// TODO summarise game
 }
 
 std::string GetGuess()
